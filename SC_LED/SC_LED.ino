@@ -53,6 +53,14 @@ void sendScratch(String str) {
   }
 }
 
+void sensorUpdate(String sensor, String value) {
+  sendScratch("sensor-update \"" + sensor + "\" " + value + " ");
+}
+
+void broadcast(String str) {
+  sendScratch("broadcast \"" + str + "\"");
+}
+
 void setup() {
   Serial.begin(57600);
 
